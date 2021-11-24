@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level1</title>
+    <style>
+        #page1{
+            width: 400px;
+            height: 200px;
+            background: transparent;
+        }
+        #page2{
+            width: 200px;
+            height: 200px;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var page1 = document.getElementById('page1');
+            var btn1 = document.getElementById('color').querySelectorAll('button');
+            btn1[0].onclick = function(){
+                page1.style.backgroundColor = 'pink';
+            }
+            btn1[1].onclick = function(){
+                page1.style.backgroundColor = 'green';
+            }
+            btn1[2].onclick = function(){
+                page1.style.backgroundColor = 'orange';
+            }
+                var page2 = document.getElementById('page2');
+                var btn2 = document.getElementById('size').querySelectorAll('button');
+                btn2[0].onclick = function(){
+                    page2.style.fontSize = 10 + 'px';
+                }
+                btn2[1].onclick = function(){
+                    page2.style.fontSize = 20 + 'px';
+                }
+                btn2[2].onclick = function(){
+                    page2.style.fontSize = 30 + 'px';
+                }
+            }
+        
+    </script>
+</head>
+<body>
+    <div id='page1'>
+        <div id='color'>
+            <button>粉色</button>
+            <button>绿色</button>
+            <button>橙色</button>
+        </div>
+    </div>
+<div id='page2'>
+    <div id='size'>
+        <div>CSA前端培训</div>
+        <button>字体1</button>
+        <button>字体2</button>
+        <button>字体3</button>
+    </div>
+</div>
+</body>
+</html>

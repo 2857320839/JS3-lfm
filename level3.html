@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level3</title>
+<style>
+    textarea{
+        display: grid;
+        width: 300px;
+        height: 200px;
+        font-size: 10px;
+        float: inline-start;
+    }
+    ol{
+        margin-top: 30px;
+    }
+    li{
+        width: 200px;
+        padding: 2px;
+        background-color: rgb(106, 204, 243);
+        font-size: 10px;
+        margin: 15px 0;
+    }
+    ol li a{
+        float:right;
+    }
+</style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <ol>
+    </ol>
+    <script>
+        var btn = document.querySelector('button');
+        var text = document.querySelector('textarea');
+        var ul = document.querySelector('ol');
+        btn.onclick = function(){
+            var li = document.createElement('li');
+            li.innerHTML = text.value +"<a href='javascript:;'>删除</a>";
+            ul.insertBefore(li,ul.children[0]);
+            var as = document.querySelectorAll('a');
+            for(var i= 0;i<as.length;i++){
+                as[i].onclick = function(){
+                    ul.removeChild(this.parentNode);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
